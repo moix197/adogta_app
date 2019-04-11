@@ -4,6 +4,8 @@ html {
   line-height: 10px;
 }
 
+input[type="password"],
+input[type="text"],
 a,
 button,
 h1,
@@ -65,6 +67,15 @@ h5 {
 p {
   font-size: 1.4rem;
   line-height: 1.7rem;
+}
+
+input[type="password"],
+input[type="text"] {
+  background-color: #fff;
+  outline: none;
+  border: 0;
+  padding: 10px;
+  color: #000;
 }
 
 /*Reseting range css*/

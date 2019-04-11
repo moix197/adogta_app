@@ -39,10 +39,9 @@ class BreedsSection extends React.Component {
   }
 
   filterBreeds = valueToFilterBy => {
-    //We pass this function to the FilterControls component
-    //so it can update the state and pass us the callback to update
-    //the content.
-    //the callback should be the specific function we use to filter the content array
+    //this function is passed to the function controls
+    //so that i'll be able to update the isFiltered state with the
+    //filtered array
     this.setState({
       isFiltered: valueToFilterBy
     });
@@ -62,6 +61,8 @@ class BreedsSection extends React.Component {
       });
   }
 
+  //we handle the active items this way to be able to also set
+  //the active state in the correct map pointer and shelter item
   updateActiveItem = () => {
     this.setState(prevState => {
       return { isItemActive: !prevState.isItemActive };
@@ -76,6 +77,8 @@ class BreedsSection extends React.Component {
       <FilterControls
         updateParentStateFunction={this.filterBreeds}
         aryToFilter={this.state.breedsAry}
+        //TODO this may be good to be changed to separate parameters
+        //instead of an object
         controls={[
           {
             filterType: "selectBar",
@@ -91,6 +94,11 @@ class BreedsSection extends React.Component {
         ]}
       />
     );
+
+    if (this.state.breedsAry.length === 0) {
+      //TODO: find a nice loading image and fix
+      return <Container>Loading...</Container>;
+    }
 
     return (
       <section>

@@ -31,7 +31,6 @@ const PetImg = styled.img`
 const OuterPetDescription = styled.div``;
 
 const OuterName = styled.div`
-  padding: 20px 0;
   text-transform: uppercase;
   text-align: center;
 `;
@@ -88,6 +87,7 @@ class PetDetails extends React.Component {
   render() {
     if (this.state.isLoading) {
       return (
+        //TODO: find a nice loading image and fix
         <div>
           <img src={Dog} alt="dog loading" />
           <p>Loading...</p>
@@ -98,22 +98,26 @@ class PetDetails extends React.Component {
     return (
       <PetDetailsContainer>
         <OuterImage>
-          <PetImg src={this.state.photo} alt="dog thumbnail" />
-        </OuterImage>
-        <OuterPetDescription>
-          <OuterName>
-            <h2>{this.state.name}</h2>
-          </OuterName>
-          <p>RAZA: {this.state.breed}</p>
-          <p>RESCATISTA: {this.state.rescuedBy}</p>
-          {/*<p>age: {this.props.selectedPet.age}</p>
+          <OuterImage>
+            <PetImg src={this.state.photo} alt="dog thumbnail" />
+          </OuterImage>
+          <OuterPetDescription>
+            <p>&nbsp;</p>
+            <OuterName>
+              <h2>{this.state.name}</h2>
+            </OuterName>
+            <p>&nbsp;</p>
+            <p>RAZA: {this.state.breed}</p>
+            <p>RESCATISTA: {this.state.rescuedBy}</p>
+            {/*<p>age: {this.props.selectedPet.age}</p>
           <p>size:{this.props.selectedPet.size}</p>
       <p>{this.props.selectedPet.description}</p>*/}
-        </OuterPetDescription>
-
-        <Link to="/adoptar" onClick={this.handleGoBackBtn}>
-          <Button componentTxt="VOLVER" />
-        </Link>
+          </OuterPetDescription>
+          <p>&nbsp;</p>
+          <Link to="/adoptar" onClick={this.handleGoBackBtn}>
+            <Button componentTxt="VOLVER" />
+          </Link>
+        </OuterImage>
       </PetDetailsContainer>
     );
   }

@@ -42,7 +42,9 @@ class MapSection extends React.Component {
     zoom: 11
   };
 
-  setGeoLocation = () => {
+  //You can use this if you want to center the map
+  //depending on the user location
+  /*setGeoLocation = () => {
     navigator.geolocation.getCurrentPosition(e => {
       this.setState({
         center: {
@@ -52,8 +54,9 @@ class MapSection extends React.Component {
         }
       });
     });
-  };
+  };*/
 
+  //we use this to send the correct hovered item to the parent
   handleHover = itemID => {
     this.props.setHoveredItem(itemID);
   };

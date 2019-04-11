@@ -33,7 +33,7 @@ const MenuBtnTxt = styled.span`
 
 const SingleLeftBarButton = props => {
   return (
-    <NavLink to={`/${props.navName}`}>
+    <NavLink to={props.navName === "inicio" ? `/` : `/${props.navName}`}>
       <MenuBtn>
         <MenuBtnIcon src={props.icon} alt={`${props.navName} Botón`} />
         <MenuBtnTxt>{props.navName}</MenuBtnTxt>

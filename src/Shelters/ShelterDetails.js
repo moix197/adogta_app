@@ -32,7 +32,6 @@ const OuterShelterDescription = styled.div`
 `;
 
 const OuterName = styled.div`
-  padding: 20px 0;
   text-transform: uppercase;
   text-align: center;
 `;
@@ -93,24 +92,25 @@ class ShelterDetails extends React.Component {
     return (
       <ShelterDetailsContainer>
         <div>
-          <div>
-            <OuterImage>
-              <ShelterImg
-                src={this.state.photo}
-                alt={`Refugio ${this.state.name}`}
-              />
-            </OuterImage>
-            <OuterShelterDescription>
-              <OuterName>
-                <h1>{this.state.name}</h1>
-              </OuterName>
-              <p>Rescatista: {this.state.representative}</p>
-              <p>Ciudad: {this.state.city}</p>
-            </OuterShelterDescription>
-            <Link to="/refugios" onClick={this.handleGoBackBtn}>
-              <Button componentTxt="VOLVER" />
-            </Link>
-          </div>
+          <OuterImage>
+            <ShelterImg
+              src={this.state.photo}
+              alt={`Refugio ${this.state.name}`}
+            />
+          </OuterImage>
+          <OuterShelterDescription>
+            <p>&nbsp;</p>
+            <OuterName>
+              <h1>{this.state.name}</h1>
+            </OuterName>
+            <p>&nbsp;</p>
+            <p>Rescatista: {this.state.representative}</p>
+            <p>Ciudad: {this.state.city}</p>
+          </OuterShelterDescription>
+          <p>&nbsp;</p>
+          <Link to="/refugios" onClick={this.handleGoBackBtn}>
+            <Button componentTxt="VOLVER" />
+          </Link>
         </div>
       </ShelterDetailsContainer>
     );

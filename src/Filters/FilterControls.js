@@ -8,7 +8,7 @@ const FiltersSectionContainer = styled.div`
   grid-gap: 10px;
   grid-template-columns: 1, 1fr;
   width: 100%;
-<p>&nbsp;</p>`;
+`;
 
 const OuterFilters = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ class FilterControls extends React.Component {
       isSize;
 
     //check if it's a breed or a pet
-    //and set the correr weight
+    //and set the correct weight
     if (pet.weight !== undefined && pet.weight.metric !== undefined) {
       let tempWeight = pet.weight.metric.split(" ");
       petWeight = Number(tempWeight[tempWeight.length - 1]);

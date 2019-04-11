@@ -41,12 +41,6 @@ class FilterDragBar extends React.Component {
             value={this.state.rangeValue}
             onChange={this.handleFilterClick}
           />
-          {/*<p>
-            {this.props.filterBy[0] - 1} -{" "}
-            {this.state.rangeValue > 1
-              ? `${this.state.rangeValue} años`
-              : `${this.state.rangeValue} año`}{" "}
-            </p>*/}
         </div>
       </OuterFilterBar>
     );

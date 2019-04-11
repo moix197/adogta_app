@@ -3,7 +3,6 @@ import { Link } from "@reach/router";
 import styled from "styled-components";
 
 import HomeImage from "../images/bar_home_img.png";
-import MapImage from "../images/bar_map_img.png";
 import AdoptImage from "../images/bar_adopt_img.png";
 import BreedsImage from "../images/bar_breeds_img.png";
 import SingleLeftBarButton from "./SingleLeftBarButton";
@@ -63,8 +62,7 @@ const navButtonsAry = [
   { navName: "inicio", icon: HomeImage },
   { navName: "adoptar", icon: AdoptImage },
   { navName: "refugios", icon: BreedsImage },
-  { navName: "razas", icon: BreedsImage },
-  { navName: "mapa", icon: MapImage }
+  { navName: "razas", icon: BreedsImage }
 ];
 class LeftBar extends React.Component {
   render() {

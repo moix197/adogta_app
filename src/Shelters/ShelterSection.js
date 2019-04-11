@@ -47,6 +47,8 @@ class ShelterSection extends React.Component {
     super(props);
     this.state = {
       isMapActive: this.props.showMap,
+      //we handle the mapZoom and mapCenter from here just in case we want
+      //e.g: to center and zoom the map when the user clicks an item.
       mapZoom: 11,
       mapCenter: {
         lat: -34.5915392,
@@ -57,18 +59,23 @@ class ShelterSection extends React.Component {
     };
   }
 
+  //We add this just in case we want give the user the option to hide the map
   toggleShowMap = () => {
     this.setState(state => {
       return { isMapActive: !state.isMapActive };
     });
   };
 
+  //we handle the active items this way to be able to also set
+  //the active state in the correct map pointer and shelter item
   setActiveShelter = itemID => {
     this.setState({
       activeShelterID: itemID
     });
   };
 
+  //we handle the hovered items this way to be able to also set
+  //the hover state in the correct map pointer and shelter item
   setHoveredShelterID = itemID => {
     this.setState({
       hoveredShelterID: itemID
@@ -101,7 +108,7 @@ class ShelterSection extends React.Component {
                     key={shelter.id}
                     setHoveredItem={this.setHoveredShelterID}
                     isHovered={
-                      shelter.id == Number(this.state.hoveredShelterID)
+                      shelter.id === Number(this.state.hoveredShelterID)
                     }
                     id={shelter.id}
                     name={shelter.name}

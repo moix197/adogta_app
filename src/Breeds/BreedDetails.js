@@ -97,7 +97,9 @@ class BreedDetails extends React.Component {
     }
     return (
       <OuterDetails>
+        <p>&nbsp;</p>
         <h1>{this.state.name}</h1>
+        <p>&nbsp;</p>
         <div>
           <p>Edad aproximada: {this.state.ageSpawn}</p>
           <p>Altura aproximada: {this.state.height}</p>
@@ -105,6 +107,7 @@ class BreedDetails extends React.Component {
           <p>
             El {this.state.name} es normalmente {this.state.temperament}
           </p>
+          <p>&nbsp;</p>
           <Link to="/razas">
             <Button componentTxt="VOLVER" />
           </Link>

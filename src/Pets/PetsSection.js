@@ -47,6 +47,8 @@ class PetSection extends React.Component {
     this.state = {
       isMapActive: this.props.showMap,
       isFiltered: this.props.petsAry,
+      //we handle the mapZoom and mapCenter from here just in case we want
+      //e.g: to center and zoom the map when the user clicks an item.
       mapZoom: 11,
       mapCenter: {
         lat: -34.5915392,
@@ -57,31 +59,32 @@ class PetSection extends React.Component {
     };
   }
 
-  filterPets = (valueToFilterBy, filterCb) => {
-    //We pass this function to the FilterControls component
-    //so it can update the state and pass us the callback to update
-    //the content.
-    //the callback should be the specific function we use to filter the content array
-    //let aryToFilter = this.state.isFiltered || this.props.petsAry;
+  filterPets = valueToFilterBy => {
+    //this function is passed to the function controls
+    //so that i'll be able to update the isFiltered state with the
+    //filtered array
     this.setState({
-      isFiltered: [
-        ...valueToFilterBy
-      ] /*filterCb(aryToFilter, valueToFilterBy)*/
+      isFiltered: [...valueToFilterBy]
     });
   };
 
+  //We add this just in case we want give the user the option to hide the map
   toggleShowMap = () => {
     this.setState(state => {
       return { isMapActive: !state.isMapActive };
     });
   };
 
+  //we handle the active items this way to be able to also set
+  //the active state in the correct map pointer and shelter item
   setActivePet = itemID => {
     this.setState({
       activePetID: itemID
     });
   };
 
+  //we handle the hovered items this way to be able to also set
+  //the hover state in the correct map pointer and shelter item
   setHoveredPetID = itemID => {
     this.setState({
       hoveredPetID: itemID
@@ -97,10 +100,9 @@ class PetSection extends React.Component {
   //   this.setState({
   //     mapZoom: 12,
   //     mapCenter: address
-  //   });
-  //   setTimeout(() => {
+  //   },() => {
   //     this.resetMap();
-  //   }, 500);
+  //   });
   // };
 
   // resetMap = () => {
@@ -119,6 +121,8 @@ class PetSection extends React.Component {
         updateParentStateFunction={this.filterPets}
         aryToFilter={this.props.petsAry}
         controls={[
+          //TODO this may be good to be changed to separate parameters
+          //instead of an object
           {
             filterType: "selectBar",
             filterPoperty: {

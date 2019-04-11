@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 const OuterBtn = styled.div`
   display: block;
-  margin: 20px auto;
   padding: 30px;
   font-size: 2rem;
   background-color: #61dafb;
   text-align: center;
+  cursor: pointer;
 `;
 
 const Button = props => {

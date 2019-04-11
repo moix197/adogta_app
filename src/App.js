@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Router, Redirect } from "@reach/router";
+import { Router } from "@reach/router";
 import Connect from "./Connect";
 import LeftBar from "./global_components/LeftBar";
 import HomePage from "./HomePage";
@@ -8,10 +8,10 @@ import PetSection from "./Pets/PetsSection";
 import SheltersPage from "./Shelters/SheltersPage";
 import { Provider } from ".//SearchContext";
 import DogShelterImg from "./images/dog_shelter.png";
-import MapSection from "./Maps/MapSection";
 import styled from "styled-components";
 
 const MainContentBox = styled.div`
+  position: relative;
   width: calc(100% - 107px);
   margin-left: 107px;
   overflow: hidden;
@@ -178,8 +178,7 @@ class App extends Component {
         <MainContentBox>
           <Provider value={this.state}>
             <Router>
-              <Redirect from="/" to="/inicio" />
-              <HomePage path="/inicio" />
+              <HomePage path="/" />
               <PetSection
                 path="adoptar/*"
                 title="Listos para adoptar"
@@ -189,7 +188,6 @@ class App extends Component {
               <BreedsPage path="razas/*" />
               <SheltersPage path="refugios/*" />
               <Connect path="conectarse" />
-              <MapSection aryToShow={this.state.sheltersAry} path="mapa" />
             </Router>
           </Provider>
         </MainContentBox>
