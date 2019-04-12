@@ -1,15 +1,15 @@
 {
-  "main.css": "/static/css/main.dfaf6cc5.chunk.css",
-  "main.js": "/static/js/main.27e419b4.chunk.js",
-  "main.js.map": "/static/js/main.27e419b4.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
-  "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
-  "static/js/2.afb78945.chunk.js": "/static/js/2.afb78945.chunk.js",
-  "static/js/2.afb78945.chunk.js.map": "/static/js/2.afb78945.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.c83d046e73ac17f545d010ae69332566.js": "/precache-manifest.c83d046e73ac17f545d010ae69332566.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.dfaf6cc5.chunk.css.map": "/static/css/main.dfaf6cc5.chunk.css.map",
-  "static/media/dog_shelter.png": "/static/media/dog_shelter.00204028.png",
-  "static/media/loading.gif": "/static/media/loading.0c46c7d8.gif"
+  "main.css": "/adogta_app/static/css/main.dfaf6cc5.chunk.css",
+  "main.js": "/adogta_app/static/js/main.496a3af4.chunk.js",
+  "main.js.map": "/adogta_app/static/js/main.496a3af4.chunk.js.map",
+  "runtime~main.js": "/adogta_app/static/js/runtime~main.6921b5aa.js",
+  "runtime~main.js.map": "/adogta_app/static/js/runtime~main.6921b5aa.js.map",
+  "static/js/2.7cc3cc75.chunk.js": "/adogta_app/static/js/2.7cc3cc75.chunk.js",
+  "static/js/2.7cc3cc75.chunk.js.map": "/adogta_app/static/js/2.7cc3cc75.chunk.js.map",
+  "index.html": "/adogta_app/index.html",
+  "precache-manifest.095702308d2188fab2b027a201ab283b.js": "/adogta_app/precache-manifest.095702308d2188fab2b027a201ab283b.js",
+  "service-worker.js": "/adogta_app/service-worker.js",
+  "static/css/main.dfaf6cc5.chunk.css.map": "/adogta_app/static/css/main.dfaf6cc5.chunk.css.map",
+  "static/media/dog_shelter.png": "/adogta_app/static/media/dog_shelter.00204028.png",
+  "static/media/loading.gif": "/adogta_app/static/media/loading.0c46c7d8.gif"
 }
