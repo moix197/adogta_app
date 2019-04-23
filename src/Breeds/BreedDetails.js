@@ -85,7 +85,6 @@ class BreedDetails extends React.Component {
   };
 
   render() {
-    console.log(this.state);
     if (this.state.isLoading === true) {
       return (
         <OuterDetails>
@@ -108,7 +107,7 @@ class BreedDetails extends React.Component {
             El {this.state.name} es normalmente {this.state.temperament}
           </p>
           <p>&nbsp;</p>
-          <Link to="/razas">
+          <Link to="/razas" onClick={this.props.updateActiveItem}>
             <Button componentTxt="VOLVER" />
           </Link>
         </div>

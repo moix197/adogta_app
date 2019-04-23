@@ -2,6 +2,7 @@
   "name": "adogta_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://moix197.github.io/adogta_app/",
   "dependencies": {
     "@reach/router": "^1.2.1",
     "google-map-react": "^1.1.2",
@@ -15,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
