@@ -4,7 +4,7 @@ import { Consumer } from "../SearchContext";
 import SingleShelter from "./SingleShelter";
 import MapSection from "../Maps/MapSection";
 import SectionTitle from "../global_components/SectionTitle";
-import ShelterDetails from "./ShelterDetails";
+import ItemsDetails from "../global_components/ItemsDetails";
 import { Router } from "@reach/router";
 
 const SheltersSection = styled.section`
@@ -123,7 +123,11 @@ class ShelterSection extends React.Component {
           {this.props.children}
         </SheltersContainer>
         <Router>
-          <ShelterDetails path=":id" setActiveShelter={this.setActiveShelter} />
+          <ItemsDetails
+            path=":id"
+            setActiveItem={this.setActiveShelter}
+            itemsAry={this.props.sheltersAry}
+          />
         </Router>
       </SheltersSection>
     );

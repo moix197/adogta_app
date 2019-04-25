@@ -6,7 +6,7 @@ import FilterControls from "../Filters/FilterControls";
 import MapSection from "../Maps/MapSection";
 import SectionTitle from "../global_components/SectionTitle";
 import { Router } from "@reach/router";
-import PetDetails from "./PetDetails";
+import ItemsDetails from "../global_components/ItemsDetails";
 
 const PetsSection = styled.section``;
 
@@ -94,7 +94,7 @@ class PetSection extends React.Component {
   // zoomMap and reset map are part of the functionality that will zoom the map
   // and center it when the user clicks on an item, if you want to use it
   // just uncomment these lines, don't forget to pass the zooMap function as a prop
-  // to the PetDetails component
+  // to the ItemsDetails component
   //
   // zoomMap = address => {
   //   this.setState({
@@ -141,7 +141,7 @@ class PetSection extends React.Component {
               value: "age"
             },
             filterBy: {
-              values: [1, 20]
+              values: [0, 20]
             }
           }
         ]}
@@ -187,7 +187,11 @@ class PetSection extends React.Component {
           {this.props.children}
         </PetsContainer>
         <Router>
-          <PetDetails path=":id" setActivePet={this.setActivePet} />
+          <ItemsDetails
+            path=":id"
+            setActiveItem={this.setActivePet}
+            itemsAry={this.props.petsAry}
+          />
         </Router>
       </PetsSection>
     );

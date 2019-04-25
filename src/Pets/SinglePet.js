@@ -48,7 +48,7 @@ class SinglePet extends React.Component {
         }}
         isHovered={this.state.isHovered}
       >
-        <Link to={`/adoptar/${this.props.id}`} hola={"heyyy"}>
+        <Link to={`/adoptar/${this.props.id}`}>
           <div>
             <SinglePetImg src={this.props.photo} />
           </div>
